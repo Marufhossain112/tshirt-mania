@@ -6,4 +6,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
+  margin-left: 55px;
+  margin-top: 35px;
 }
