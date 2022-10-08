@@ -1,2 +1,6 @@
 I am just checking
+<<<<<<< HEAD
 I am gurther chaecking
+=======
+Hey bro , pull me first.
+>>>>>>> fceafc6 ( update 12:45 am)
