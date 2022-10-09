@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Cart.css";
 const Cart = ({ cart, handleRemoveCart }) => {
   let message;
   if (cart.length === 0) {
@@ -7,9 +7,11 @@ const Cart = ({ cart, handleRemoveCart }) => {
   } else if (cart.length === 1) {
     message = (
       <div>
-        <p>Moore jonnon kino</p>
-        <p>Moore baher lagi kino</p>
-        <p>Moore dardar lagi kino</p>
+        <div>
+          <p>Moore jonnon kino</p>
+          <p>Moore baher lagi kino</p>
+          <p>Moore dardar lagi kino</p>
+        </div>
       </div>
     );
   } else {
@@ -17,7 +19,9 @@ const Cart = ({ cart, handleRemoveCart }) => {
   }
   return (
     <div>
-      <h2>This is a Cart.</h2>
+      <h2 className={cart.length === 0 ? "orange" : "purple"}>
+        This is a Cart.
+      </h2>
       <p>Ordered items : {cart.length}</p>
       {cart.map((tshirt) => (
         <p key={tshirt.id}>
@@ -26,6 +30,11 @@ const Cart = ({ cart, handleRemoveCart }) => {
         </p>
       ))}
       {message}
+      {cart.length === 3 ? (
+        <p>I am giving 3 gift to you</p>
+      ) : (
+        <p>I have give you many gift.</p>
+      )}
     </div>
   );
 };
