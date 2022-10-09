@@ -22,7 +22,7 @@ const Cart = ({ cart, handleRemoveCart }) => {
       <h2 className={cart.length === 0 ? "orange" : "purple"}>
         This is a Cart.
       </h2>
-      <p>Ordered items : {cart.length}</p>
+      <p className={`bold ${cart.length === 2 ? 'green' : 'pink'}`}>Ordered items : {cart.length}</p>
       {cart.map((tshirt) => (
         <p key={tshirt.id}>
           {tshirt.name}
